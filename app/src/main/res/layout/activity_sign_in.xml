@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.manco.habits.SignIn">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/google_button"
+        android:id="@+id/google_button"
+        android:onClick="Google"
+        android:layout_marginStart="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/Email_text"
+        android:layout_marginTop="31dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fb_button"
+        android:id="@+id/fb_button"
+        android:layout_alignTop="@+id/google_button"
+        android:layout_toEndOf="@+id/google_button"
+        android:layout_marginStart="46dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/or"
+        android:id="@+id/or"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/google_button"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/Email_text"
+        android:layout_below="@+id/or"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:password="false"
+        android:phoneNumber="false"
+        android:text="Email"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberPassword|textPassword"
+        android:ems="10"
+        android:id="@+id/Password_text"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/Email_text"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal"
+        android:text="Password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Sign_in"
+        android:id="@+id/signIn"
+        android:layout_marginTop="51dp"
+        android:onClick="onClick"
+        android:layout_below="@+id/Password_text"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/forgot_password"
+        android:id="@+id/forgotpass"
+        android:textSize="10dp"
+        android:layout_below="@+id/signIn"
+        android:layout_alignStart="@+id/signIn"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

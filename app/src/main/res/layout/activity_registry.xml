@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.manco.habits.Registry">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/google_button"
+        android:id="@+id/google_button"
+        android:layout_marginStart="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/Email_text"
+        android:layout_marginTop="31dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fb_button"
+        android:id="@+id/fb_button"
+        android:layout_alignTop="@+id/google_button"
+        android:layout_toEndOf="@+id/google_button"
+        android:layout_marginStart="46dp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/or"
+        android:id="@+id/or"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/google_button"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/Email_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/FirstName"
+        android:layout_centerHorizontal="true"
+        android:text="@string/email_input" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword|number|textPassword"
+        android:ems="10"
+        android:id="@+id/Password_text"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/Email_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/password_input" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_button"
+        android:id="@+id/Register"
+        android:onClick="onClick"
+        android:layout_below="@+id/Password2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberPassword|textPassword"
+        android:ems="10"
+        android:id="@+id/Password2"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/Password_text"
+        android:layout_alignStart="@+id/Password_text"
+        android:text="@string/passwordagain_input" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/firstname_input"
+        android:ems="10"
+        android:id="@+id/FirstName"
+        android:layout_marginLeft="30dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/or"
+        android:layout_toStartOf="@+id/Register"
+        android:layout_marginTop="50dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/lastname_input"
+        android:ems="10"
+        android:id="@+id/LastName"
+        android:layout_alignTop="@+id/FirstName"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="2dp"
+        android:layout_alignEnd="@+id/Email_text"
+        android:gravity="center_horizontal"
+        android:layout_toEndOf="@+id/google_button" />
+
+</RelativeLayout>
